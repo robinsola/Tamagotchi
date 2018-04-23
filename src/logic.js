@@ -11,5 +11,11 @@ class Friend {
       this.hungerLevel--;
       }, 1000);
     }
+
+    getBored() {
+      setInterval(() => {
+        this.moodLevel--;
+        }, 1000);
+      }
   }
 export { Friend };

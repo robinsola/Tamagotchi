@@ -6,7 +6,6 @@ describe('friend', function() {
 
   beforeEach(function() {
     jasmine.clock().install();
-    newFriend.getHungry();
   });
 
   afterEach(function() {
@@ -21,11 +20,13 @@ describe('friend', function() {
   });
 
   it('should reduce foodLevel by one every second', function() {
+    newFriend.getHungry();
     jasmine.clock().tick(2001);
     expect(newFriend.hungerLevel).toEqual(8);
   });
 
   it('should reduce moodLevel by one every second', function() {
+    newFriend.getBored();
     jasmine.clock().tick(2001);
     expect(newFriend.moodLevel).toEqual(8);
   });
