@@ -5,5 +5,11 @@ class Friend {
     this.moodLevel = 10;
     this.energyLevel = 20;
   }
-}
+
+  getHungry() {
+    setInterval(() => {
+      this.hungerLevel--;
+      }, 1000);
+    }
+  }
 export { Friend };

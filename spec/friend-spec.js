@@ -6,7 +6,7 @@ describe('friend', function() {
 
   beforeEach(function() {
     jasmine.clock().install();
-    // newFriend.getHungry();
+    newFriend.getHungry();
   });
 
   afterEach(function() {
