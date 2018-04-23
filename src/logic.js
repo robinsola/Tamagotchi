@@ -33,5 +33,11 @@ class Friend {
     this.moodLevel += 3;
     this.energyLevel -= 3;
   }
+
+  dead() {
+    if (this.hungerLevel <= 0 || this.moodLevel <= 0 || this.energyLevel <= 0) {
+      return true;
+    }
+  }
 }
 export { Friend };
