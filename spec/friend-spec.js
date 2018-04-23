@@ -25,4 +25,9 @@ describe('friend', function() {
     expect(newFriend.hungerLevel).toEqual(8);
   });
 
+  it('should reduce moodLevel by one every second', function() {
+    jasmine.clock().tick(2001);
+    expect(newFriend.moodLevel).toEqual(8);
+  });
+
 });
