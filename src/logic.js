@@ -6,4 +6,4 @@ class Friend {
     this.energyLevel = 20;
   }
 }
-export { Friend }
+export { Friend };

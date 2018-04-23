@@ -3,8 +3,10 @@ import { Friend } from './../src/logic.js';
 describe('friend', function() {
   let newFriend = new Friend('Tommi');
 
+
   beforeEach(function() {
     jasmine.clock().install();
+    // newFriend.getHungry();
   });
 
   afterEach(function() {
@@ -16,6 +18,11 @@ describe('friend', function() {
     expect(newFriend.hungerLevel).toEqual(10);
     expect(newFriend.moodLevel).toEqual(10);
     expect(newFriend.energyLevel).toEqual(20);
+  });
+
+  it('should reduce foodLevel by one every second', function() {
+    jasmine.clock().tick(2001);
+    expect(newFriend.hungerLevel).toEqual(8);
   });
 
 });
