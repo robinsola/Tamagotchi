@@ -31,4 +31,11 @@ describe('friend', function() {
     expect(newFriend.moodLevel).toEqual(8);
   });
 
+  it('should reduce energyLevel by one every second', function() {
+    newFriend.getTired();
+    jasmine.clock().tick(2001);
+    expect(newFriend.energyLevel).toEqual(18);
+  });
+
+
 });

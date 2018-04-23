@@ -12,10 +12,10 @@ class Friend {
       }, 1000);
     }
 
-    getBored() {
-      setInterval(() => {
-        this.moodLevel--;
-        }, 1000);
-      }
+  getBored() {
+    setInterval(() => {
+      this.moodLevel--;
+      }, 1000);
+    }
   }
 export { Friend };
