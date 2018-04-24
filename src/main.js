@@ -66,11 +66,21 @@ $(document).ready(function() {
     }, 1000);
 
   });
-      $.get(`https://api.giphy.com/v1/gifs/4oZpTY30l6XtK?api_key=${process.env.API_KEY}&limit=1`).then(function(response) {
-        $('.game-over').append('<img src="' + response.data.images.original_still.url + '">');
+      $.get(`https://api.giphy.com/v1/gifs/4oZpTY30l6XtK?api_key=${process.env.API_KEY}`).then(function(response) {
+        $('.game-over').append('<img src="' + response.data.images.fixed_width.url + '">');
       }).fail(function(error) {
         $('.game-over').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
       });
 
+      $.get(`https://api.giphy.com/v1/gifs/jPgEkqIWTmYLK?api_key=${process.env.API_KEY}`).then(function(response) {
+        $('.game-over').append('<img src="' + response.data.images.fixed_width.url + '">');
+      }).fail(function(error) {
+        $('.game-over').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
+      });
 
+      $.get(`https://api.giphy.com/v1/gifs/SggILpMXO7Xt6?api_key=${process.env.API_KEY}`).then(function(response) {
+        $('.game-over').append('<img src="' + response.data.images.fixed_height_downsampled.url + '">');
+      }).fail(function(error) {
+        $('.game-over').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
+      });
 });
