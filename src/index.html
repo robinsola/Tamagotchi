@@ -6,14 +6,26 @@
   </head>
   <body>
     <div class="container">
-      <h1>Play Tamagotchi!</h1>
-      <form id="user-input">
-        <div class="form-group">
-          <label for="name-input">Pet Name:</label>
-          <input id="name-input" type="text" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-danger">play</button>
-      </form>
+      <div class="form-div">
+        <h1>Play Tamagotchi!</h1>
+        <form id="user-input">
+          <div class="form-group">
+            <label for="name-input">Pet Name:</label>
+            <input id="name-input" type="text" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-danger">play</button>
+        </form>
+      </div>
+      <div class="output">
+        <h3>Hi <span id="name-output"></span>!</h3>
+        <p>Nutrient Level: <span id="hunger-output"></span></p>
+        <p>Mood Level: <span id="mood-output"></span></p>
+        <p>Energy Level: <span id="energy-output"></span></p>
+    </div>
+    <div class="buttons">
+      <button id="feed-btn" class="btn btn-warning">FEED</button>
+      <button id="play-btn" class="btn btn-success">PLAY</button>
+      <button id="sleep-btn" class="btn btn-info">SLEEP</button>
     </div>
   </body>
 </html>
