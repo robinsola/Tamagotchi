@@ -83,4 +83,10 @@ $(document).ready(function() {
       }).fail(function(error) {
         $('.game-over').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
       });
+
+      $.get(`https://api.giphy.com/v1/gifs/RW2h8vSa20JCU?api_key=${process.env.API_KEY}`).then(function(response) {
+        $('.game-over').append('<img src="' + response.data.images.fixed_height_downsampled.url + '">');
+      }).fail(function(error) {
+        $('.game-over').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
+      });
 });
