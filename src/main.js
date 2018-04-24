@@ -49,6 +49,9 @@ $(document).ready(function() {
       $('#mood-output').text(newFriend.moodLevel);
       if (newFriend.moodLevel <= 0) {
         $('#mood-output').text("Your friend died because it had a bad outlook on life.");
+        $(".output").hide();
+        $(".buttons").hide();
+        $("#death").show();
       }
     }, 1000);
 
@@ -56,8 +59,18 @@ $(document).ready(function() {
       $('#energy-output').text(newFriend.energyLevel);
       if (newFriend.energyLevel <= 0) {
         $("#energy-output").text("your friend needs a nap.");
+        $(".output").hide();
+        $(".buttons").hide();
+        $("#death").show();
       }
     }, 1000);
 
   });
+      $.get(`https://api.giphy.com/v1/gifs/4oZpTY30l6XtK?api_key=${process.env.API_KEY}&limit=1`).then(function(response) {
+        $('.game-over').append('<img src="' + response.data.images.original_still.url + '">');
+      }).fail(function(error) {
+        $('.game-over').text(`There was an error processing your request: ${error.responseText}. Please try again.`);
+      });
+
+
 });

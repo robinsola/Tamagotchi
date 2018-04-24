@@ -35,3 +35,7 @@ button:first-of-type {
   margin: 20px auto 0 auto;
   width: 400px;
 }
+
+#death {
+  display: none;
+}
