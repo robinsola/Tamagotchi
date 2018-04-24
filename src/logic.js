@@ -34,6 +34,11 @@ class Friend {
     this.energyLevel -= 3;
   }
 
+  sleep() {
+    this.energyLevel += 5;
+    this.hungerLevel -= 2;
+  }
+
   dead() {
     if (this.hungerLevel <= 0 || this.moodLevel <= 0 || this.energyLevel <= 0) {
       return true;

@@ -57,6 +57,12 @@ describe('friend', function() {
     expect(newFriend.moodLevel).toEqual(13);
     expect(newFriend.energyLevel).toEqual(17);
   });
+
+  it('should get 5 energies back when it sleeps', function() {
+    newFriend.sleep();
+    expect(newFriend.energyLevel).toEqual(25);
+    expect(newFriend.hungerLevel).toEqual(8);
+  });
 });
 
 describe('friend', function() {
